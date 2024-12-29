@@ -27,8 +27,9 @@ const nextConfig = {
 
     return config;
   },
-
-  // ...other config
+  experimental: {
+    typedRoutes: true,
+  }
 };
 
 export default nextConfig;
