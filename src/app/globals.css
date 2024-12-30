@@ -24,4 +24,16 @@
     @apply inline-flex rounded-lg px-3 py-1 text-sm font-medium tracking-tight outline outline-1 -outline-offset-1 outline-[#222]/10
   }
 
+  .section-title {
+    @apply bg-gradient-to-b from-black to-[#001E80] bg-clip-text text-3xl font-bold tracking-tighter text-transparent md:text-[54px] md:leading-[60px]
+  }
+
+  .section-description {
+    @apply text-[22px] leading-[30px] tracking-tight text-[#010D3E]
+  }
+
+  .section-heading-container {
+    @apply mx-auto max-w-[540px]
+  }
+
 }

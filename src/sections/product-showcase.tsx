@@ -8,12 +8,12 @@ export const ProductShowcase = () => {
   return (
     <section className="overflow-x-clip bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24">
       <div className="container">
-        <div className="mx-auto max-w-[540px] text-center">
+        <div className="section-heading-container text-center">
           <p className="tag">Boost your productivity</p>
-          <h2 className="mt-5 bg-gradient-to-b from-black to-[#001E80] bg-clip-text text-3xl font-bold tracking-tighter text-transparent md:text-[54px] md:leading-[60px]">
+          <h2 className="section-title mt-5">
             A more effective way to track progress
           </h2>
-          <p className="mt-5 text-[22px] leading-[30px] tracking-tight text-[#010D3E]">
+          <p className="section-description mt-5">
             Celebrate the joy of accomplishment with an app designed to track
             your progress and motivate your efforts.
           </p>
