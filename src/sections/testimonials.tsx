@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { twMerge } from "tailwind-merge";
 
 import avatar1 from "@/assets/avatar-1.png";
@@ -75,7 +73,7 @@ const thirdColumn = testimonials.slice(6);
 
 export const Testimonials = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white pb-24">
       <div className="container">
         <div className="section-heading-container text-center">
           <div className="tag">Version 2.0 is here</div>
