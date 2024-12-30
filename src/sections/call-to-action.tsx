@@ -6,7 +6,7 @@ import starImage from "@/assets/star.png";
 
 export const CallToAction = () => {
   return (
-    <section className="overflow-x-clip bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24">
+    <section className="overflow-x-clip bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] pb-24 lg:pt-24">
       <div className="container">
         <div className="section-heading-container relative text-center">
           <h2 className="section-title">Sign up for free today</h2>
