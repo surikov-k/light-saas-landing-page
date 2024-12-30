@@ -29,7 +29,7 @@ const links = [
 
 export const Header = () => {
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 z-20 backdrop-blur-sm">
       <div className="flex items-center justify-center bg-black py-3 text-xs text-white">
         <div className="inline-flex items-center gap-3">
           <p className="hidden text-sm text-white/60 md:block">
