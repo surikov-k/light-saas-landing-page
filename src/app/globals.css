@@ -20,4 +20,8 @@
     @apply h-8 w-auto
   }
 
+  .tag {
+    @apply inline-flex rounded-lg px-3 py-1 text-sm font-medium tracking-tight outline outline-1 -outline-offset-1 outline-[#222]/10
+  }
+
 }

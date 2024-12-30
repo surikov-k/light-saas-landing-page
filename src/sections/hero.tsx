@@ -11,9 +11,7 @@ export const Hero = () => {
       <div className="container">
         <div className="md:flex md:items-center">
           <div className="md:w-[478px]">
-            <p className="inline-flex rounded-lg px-3 py-1 text-sm font-medium tracking-tight outline outline-1 -outline-offset-1 outline-[#222]/10">
-              Version 2.0 is here
-            </p>
+            <p className="tag">Version 2.0 is here</p>
             <h1 className="mt-6 bg-gradient-to-b from-black to-[#001E80] bg-clip-text text-5xl font-bold leading-none tracking-[-0.055em] text-transparent md:mt-8 md:text-7xl">
               Pathway to productivity
             </h1>
