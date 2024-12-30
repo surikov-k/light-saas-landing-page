@@ -36,4 +36,8 @@
     @apply mx-auto max-w-[540px]
   }
 
+  .card {
+    @apply mx-auto w-full max-w-xs rounded-3xl bg-white p-10 shadow-[0_7px_14px_#EAEAEA] outline outline-1 -outline-offset-1 outline-[#F1F1F1]
+  }
+
 }
