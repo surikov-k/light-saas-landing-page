@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
 import CheckIcon from "@/assets/check.svg";
@@ -93,9 +96,20 @@ export const Pricing = () => {
                   </h3>
                   {popular && (
                     <span className="inline-flex rounded-xl px-4 py-1.5 text-sm outline outline-1 -outline-offset-1 outline-white/20">
-                      <span className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] bg-clip-text font-medium text-transparent">
+                      <motion.span
+                        animate={{
+                          backgroundPositionX: "100%",
+                        }}
+                        transition={{
+                          repeat: Infinity,
+                          duration: 1,
+                          ease: "linear",
+                          repeatType: "loop",
+                        }}
+                        className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] bg-clip-text font-medium text-transparent [background-size:200%]"
+                      >
                         Most Popular
-                      </span>
+                      </motion.span>
                     </span>
                   )}
                 </div>
