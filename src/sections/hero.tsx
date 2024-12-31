@@ -1,4 +1,8 @@
-import Image from "next/image";
+"use client";
+
+import { useRef } from "react";
+
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import ArrowRight from "@/assets/arrow-right.svg";
 import cogImage from "@/assets/cog.png";
@@ -6,8 +10,18 @@ import cylinderImage from "@/assets/cylinder.png";
 import noodleImage from "@/assets/noodle.png";
 
 export const Hero = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <section className="overflow-x-clip bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] pb-20 pt-8 md:pb-10 md:pt-6 lg:pt-5">
+    <section
+      ref={sectionRef}
+      className="overflow-x-clip bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)] pb-20 pt-8 md:pb-10 md:pt-6 lg:pt-5"
+    >
       <div className="container">
         <div className="md:flex md:items-center">
           <div className="md:w-[478px]">
@@ -29,24 +43,40 @@ export const Hero = () => {
             </div>
           </div>
           <div className="relative mt-20 md:mt-0 md:h-[648px] md:flex-1">
-            <Image
-              src={cogImage}
+            <motion.img
+              src={cogImage.src}
               alt="cog"
               className="md:absolute md:-left-6 md:h-full md:w-auto md:max-w-none lg:left-0"
+              animate={{
+                translateY: [-30, 30],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+              }}
             />
-            <Image
-              src={cylinderImage}
+            <motion.img
+              src={cylinderImage.src}
               alt="cylinder"
               width={220}
               height={220}
               className="-left-32 -top-8 hidden md:absolute md:block"
+              style={{
+                translateY,
+              }}
             />
-            <Image
-              src={noodleImage}
+            <motion.img
+              src={noodleImage.src}
               alt="noodle"
               width={220}
               height={220}
               className="absolute left-[448px] top-[524px] hidden rotate-[30deg] lg:block"
+              style={{
+                rotate: 30,
+                translateY,
+              }}
             />
           </div>
         </div>
