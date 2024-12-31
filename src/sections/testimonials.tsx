@@ -70,6 +70,7 @@ const testimonials = [
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
 const thirdColumn = testimonials.slice(6);
+const durations = [15, 19, 17];
 
 export const Testimonials = () => {
   return (
@@ -83,15 +84,16 @@ export const Testimonials = () => {
             essential tool for users around the world.
           </p>
         </div>
-        <div className="flex justify-center gap-6">
+        <div className="mt-10 flex max-h-[738px] justify-center gap-6 overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
           {[firstColumn, secondColumn, thirdColumn].map((column, index) => (
             <TestimonialsColumn
               key={index}
               testimonials={column}
+              duration={durations[index]}
               className={twMerge(
                 index === 0 && "",
-                index === 1 && "hidden md:flex",
-                index === 2 && "hidden lg:flex"
+                index === 1 && "hidden md:block",
+                index === 2 && "hidden lg:block"
               )}
             />
           ))}
