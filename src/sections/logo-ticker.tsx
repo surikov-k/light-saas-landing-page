@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+
+import { motion } from "framer-motion";
 
 import acmeLogo from "@/assets/logo-acme.png";
 import apexLogo from "@/assets/logo-apex.png";
@@ -39,16 +43,26 @@ export const LogoTicker = () => {
     <section className="bg-white py-8 md:py-12">
       <div className="container lg:px-10">
         <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
-          <div className="flex flex-none gap-14">
-            {logos.map(({ name, image }) => (
+          <motion.div
+            className="flex flex-none gap-14 pr-14"
+            animate={{
+              translateX: "-50%",
+            }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          >
+            {[...logos, ...logos].map(({ name, image }, index) => (
               <Image
-                key={name}
+                key={name + index}
                 src={image}
                 alt={name}
                 className="logo-ticker-image"
               />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
